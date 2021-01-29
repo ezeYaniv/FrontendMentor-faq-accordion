@@ -5,17 +5,11 @@ $(document).ready(function () {
   row.forEach((element) => {
     element.addEventListener("click", showText);
   });
-
-
-//   //THIS CODE STYLES ALL THE INNER STUFF
-//   for (let i = 0; i < row.length; i++) {
-//     row[i].classList.remove("active-row");
-//     // row.getElementsByClassName("list__text--main")[i].classList.remove("active-text-bold");
-//   }
 });
 
-//THIS CODE CREATES A FUNCTION TO ADD AND REMOVE CLASS NAMES
+//THIS FUNCTION ADDS AND REMOVES CLASS NAMES
 function showText() {
+    //THIS CODE REMOVES ALL EXISTING CLASSES WHEN YOU CLICK AN ALREADY-SELECTED ROW
   if (this.classList.contains("active-row")) {
     this.classList.remove("active-row");
     this.getElementsByClassName("list__text--main")[0].classList.remove("active-text-bold");
@@ -23,12 +17,10 @@ function showText() {
     $(this).siblings(".list__text--collapsible")[0].style.display = "none";
 } else {
 
-      //ADDS ALL NECESSARY CLASSES TO THESE CHILDREN
+      //THIS CODE ADDS ALL NECESSARY CLASSES TO THE ROW'S CHILDREN
     this.classList.add("active-row");
     this.getElementsByClassName("list__text--main")[0].classList.add("active-text-bold");
     this.getElementsByClassName("list__dropdown")[0].classList.add("active-dropdown");
     $(this).siblings(".list__text--collapsible")[0].style.display = "inline-block";
   }
 }
-
-

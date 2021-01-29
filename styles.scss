@@ -41,8 +41,6 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   background: linear-gradient(to bottom, $color-background-light, $color-background-dark);
   min-height: 100vh;
-  // position: relative;
-  // text-align: center;
 }
 
 //~~~~~~~~~~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,7 +49,6 @@ h1 {
   font-weight: 700;
   color: $color-text-primary;
 }
-//media query textalign left
 
 .list__text {
   &--main {
@@ -87,6 +84,8 @@ h1 {
     margin: 0;
   }
 }
+
+//~~~~~~~~~~~~~~~~~~~~~ IMAGE SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .image-section {
   background: url(../images/bg-pattern-mobile.svg) no-repeat center bottom;
@@ -130,14 +129,6 @@ h1 {
   }
 }
 
-.text-section {
-  @include tab {
-    width: 50%;
-    margin: 4rem 8rem 6rem 8rem;
-    height: 100%;
-  }
-}
-
 .computer-image {
   transform: translateY(-57%);
   display: block;
@@ -153,6 +144,16 @@ h1 {
   }
 }
 
+//~~~~~~~~~~~~~~~~~~~~~ TEXT SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.text-section {
+  @include tab {
+    width: 50%;
+    margin: 4rem 8rem 6rem 8rem;
+    height: 100%;
+  }
+}
+
 h1 {
   text-align: center;
   margin-bottom: 3rem;
@@ -164,7 +165,7 @@ h1 {
   }
 }
 
-//~~~~~~~~~~~~~~~~~~~~~ COLLAPSIBLE SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~ TEXT SECTION - COLLAPSIBLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .list {
   list-style-type: none;
 

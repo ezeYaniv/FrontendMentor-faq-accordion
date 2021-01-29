@@ -113,14 +113,6 @@ h1 {
   }
 }
 
-@media (min-width: 768px) {
-  .text-section {
-    width: 50%;
-    margin: 4rem 8rem 6rem 8rem;
-    height: 100%;
-  }
-}
-
 .computer-image {
   -webkit-transform: translateY(-57%);
           transform: translateY(-57%);
@@ -136,6 +128,14 @@ h1 {
     top: 50%;
     -webkit-transform: translateY(-50%) translateX(-20%);
             transform: translateY(-50%) translateX(-20%);
+  }
+}
+
+@media (min-width: 768px) {
+  .text-section {
+    width: 50%;
+    margin: 4rem 8rem 6rem 8rem;
+    height: 100%;
   }
 }
 
