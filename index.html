@@ -1,66 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/styles.css">
-  
-  <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/styles.css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-</head>
-<body>
-  <div class="card-wrapper">
-    <div class="image-section">
-      <div class="image-wrapper">
-        <img src="images/illustration-woman-online-mobile.svg" alt="woman with computer" class="mobile-image">
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <div class="card-wrapper">
+      <div class="image-section">
+        <div class="image-wrapper">
+          <picture>
+            <source srcset="images/illustration-woman-online-desktop.svg" media="(min-width: 768px)" />
+            <img src="images/illustration-woman-online-mobile.svg" alt="woman with computer" class="computer-image" />
+          </picture>
+        </div>
       </div>
-    </div> 
-    <h1>FAQ</h1>
-    <div class="section-collapsible">
-      <ul class="list">
-        <li class="list__item">
-          <div class="heading-row">
-            <p class="list__text--main">How many team members can I invite?</p><img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown">
-          </div>
-            <p class="list__text--collapsible list__text--hidden">You can invite up to 2 additional users on the Free plan. There is no limit on 
-              team members for the Premium plan.</p>
-        </li>
-        <li class="list__item">
-          <div class="heading-row">
-            <h2 class="list__text--main">What is the maximum file upload size?</h2><img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown">
-          </div>
-            <p class="list__text--collapsible">No more than 2GB. All files in your account must fit your allotted storage space.</p>
-        </li>
-        <li class="list__item">
-          <div class="heading-row">
-            <h2 class="list__text--main">How do I reset my password?</h2><img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown">
-          </div>
-            <p class="list__text--collapsible">Click “Forgot password” from the login page or “Change password” from your profile page.
-              A reset link will be emailed to you.</p>
-        </li>
-        <li class="list__item">
-          <div class="heading-row">
-            <h2 class="list__text--main">Can I cancel my subscription?</h2><img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown">
-            </div>
-            <p class="list__text--collapsible">Yes! Send us a message and we’ll process your request no questions asked.</p>
-        </li>
-        <li class="list__item">
-          <div class="heading-row">
-            <h2 class="list__text--main">Do you provide additional support?</h2><img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown">
-          </div>
-            <p class="list__text--collapsible">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
-        </li>
-      </ul>  
+      <div class="text-section">
+        <h1>FAQ</h1>
+        <div class="section-collapsible">
+          <ul class="list">
+            <li class="list__item">
+              <div class="list__heading-row">
+                <h2 class="list__text--main">How many team members can I invite?</h2>
+                <img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown" />
+              </div>
+              <p class="list__text--collapsible">
+                You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+              </p>
+            </li>
+            <li class="list__item">
+              <div class="list__heading-row">
+                <h2 class="list__text--main">What is the maximum file upload size?</h2>
+                <img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown" />
+              </div>
+              <p class="list__text--collapsible">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            </li>
+            <li class="list__item">
+              <div class="list__heading-row">
+                <h2 class="list__text--main">How do I reset my password?</h2>
+                <img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown" />
+              </div>
+              <p class="list__text--collapsible">
+                Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
+              </p>
+            </li>
+            <li class="list__item">
+              <div class="list__heading-row">
+                <h2 class="list__text--main">Can I cancel my subscription?</h2>
+                <img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown" />
+              </div>
+              <p class="list__text--collapsible">Yes! Send us a message and we’ll process your request no questions asked.</p>
+            </li>
+            <li class="list__item">
+              <div class="list__heading-row">
+                <h2 class="list__text--main">Do you provide additional support?</h2>
+                <img src="images/icon-arrow-down.svg" alt="dropdown icon" class="list__dropdown" />
+              </div>
+              <p class="list__text--collapsible">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by Yaniv.
-  </div>
-</body>
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by Yaniv.
+    </div> -->
+    <script src="accordion.js"></script>
+  </body>
 </html>
