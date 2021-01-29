@@ -1,6 +1,6 @@
 //THIS CODE ADDS EVENT LISTENERS FOR CLICK
 $(document).ready(function () {
-  let row = document.getElementsByClassName("list__heading-row");
+  var row = document.getElementsByClassName("list__heading-row");
   row = Array.from(row);
   row.forEach((element) => {
     element.addEventListener("click", showText);
@@ -22,7 +22,6 @@ function showText() {
     this.getElementsByClassName("list__dropdown")[0].classList.remove("active-dropdown");
     $(this).siblings(".list__text--collapsible")[0].style.display = "none";
 } else {
-      //Need some code here to remove from all the others
 
       //ADDS ALL NECESSARY CLASSES TO THESE CHILDREN
     this.classList.add("active-row");

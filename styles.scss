@@ -9,6 +9,7 @@ $color-background-dark: hsl(240, 73%, 65%);
 $color-dividers: hsl(240, 5%, 91%);
 
 $screen-sm: 768px;
+$screen-xl: 1600px;
 
 @mixin tab {
   @media (min-width: $screen-sm) {
@@ -16,7 +17,11 @@ $screen-sm: 768px;
   }
 }
 
-//~~~~~~~~~~~~~~~~~~~~~ ANIMATIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@mixin xl-screen {
+  @media (min-width: $screen-xl) {
+    @content;
+  }
+}
 
 //~~~~~~~~~~~~~~~~~~~~~ OVERALL STYLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 *,
@@ -39,7 +44,6 @@ body {
   // position: relative;
   // text-align: center;
 }
-
 
 //~~~~~~~~~~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 h1 {
@@ -66,7 +70,7 @@ h1 {
 //~~~~~~~~~~~~~~~~~~~~~ CARD ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .card-wrapper {
   background-color: #fff;
-  width: 80%;
+  width: 79%;
   border-radius: 25px;
   margin-top: 3rem;
   box-shadow: 0 40px 50px -20px rgba(0, 0, 0, 0.4);
@@ -81,33 +85,56 @@ h1 {
     width: 60%;
     padding: 0;
     margin: 0;
-    // min-height: 70%;
   }
 }
 
 .image-section {
   background: url(../images/bg-pattern-mobile.svg) no-repeat center bottom;
   height: 10rem;
+  text-align: center;
   margin-bottom: 3rem;
   @include tab {
     width: 50%;
     background: url(../images/bg-pattern-desktop.svg) no-repeat 100% 75%;
-    background-size: 200%;
-    min-height: 400px;
+    background-size: 220%;
+    min-height: 450px;
     overflow: hidden;
     margin: 0;
+    text-align: center;
   }
+  
 }
 
 .image-wrapper {
-  overflow: hidden;
+  background: url(../images/illustration-woman-online-mobile.svg) no-repeat 100% 75%;
+  background-size: 100%;
+  height: 200px;
+  width: 260px;
+  position: relative;
+  top:-115%;
+  margin: 0 auto;
 
+
+  @include tab {
+    background: url(../images/illustration-woman-online-desktop.svg) no-repeat 100% 75%;
+    background-size: 115%;
+    height: 90%;
+    width: 100%;
+    position: static;
+    top: 0;
+    margin: 0 auto;
+
+  }
+  @include xl-screen {
+    background-size: 90%; 
+  }
 }
 
 .text-section {
   @include tab {
     width: 50%;
     margin: 4rem 8rem 6rem 8rem;
+    height: 100%;
   }
 }
 
@@ -118,12 +145,11 @@ h1 {
   padding-right: 20px;
 
   @include tab {
-    transform: none;
-    height: 200px;
+    height: 340px;
     position: absolute;
+    // transform: none;
     top: 50%;
-    transform: translateY(-50%);
-    transform: translateX(-20%);
+    transform: translateY(-50%) translateX(-20%);
   }
 }
 
@@ -151,21 +177,22 @@ h1 {
     padding: 1.5rem 0;
     position: relative;
     cursor: pointer;
-  }  
+  }
 
   &__dropdown {
     position: absolute;
     right: 0;
     margin-left: 1.5rem;
     transition: 0.2s;
-    
   }
 
   &__text {
     &--main {
       display: inline-block;
       padding-right: 2rem;
-      // padding: 5rem;
+      &:hover {
+        color: $color-text-secondary;
+      }
     }
     &--collapsible {
       padding-bottom: 1.5rem;
