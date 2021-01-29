@@ -1,0 +1,137 @@
+@-webkit-keyframes rotateCarrot {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateCarrot {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Kumbh Sans", sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1d1e35;
+}
+
+.list__text--main {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #4a4b5e;
+}
+
+.list__text--collapsible {
+  font-size: 1.2rem;
+  color: #787887;
+  line-height: 1.5;
+}
+
+.card-wrapper {
+  background-color: #fff;
+  width: 80%;
+  border-radius: 25px;
+  margin: 10rem auto;
+  -webkit-box-shadow: 0 40px 50px -20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 40px 50px -20px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 2rem 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+.image-section {
+  background: url(../images/bg-pattern-mobile.svg) no-repeat center bottom;
+  height: 10rem;
+  margin-bottom: 3rem;
+}
+
+.mobile-image {
+  -webkit-transform: translateY(-55%);
+          transform: translateY(-55%);
+  display: block;
+  margin: 0 auto;
+  padding-right: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading-row {
+  border: none;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.list__item {
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.list__dropdown {
+  position: absolute;
+  right: 0;
+  margin-left: 1.5rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation: rotateCarrot;
+          animation: rotateCarrot;
+}
+
+.list__text--main {
+  display: inline-block;
+}
+
+.list__text--collapsible {
+  padding-bottom: 1.5rem;
+}
+
+.list__text--hidden {
+  display: none;
+}
+
+.list__text--visible {
+  display: inline-block;
+}
+/*# sourceMappingURL=styles.css.map */

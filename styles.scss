@@ -1,0 +1,154 @@
+//~~~~~~~~~~~~~~~~~~~~~ DECLARE VARIABLES & MIXINS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$color-text-primary: hsl(238, 29%, 16%);
+$color-text-secondary: hsl(14, 88%, 65%);
+$color-text-dark: hsl(237, 12%, 33%);
+$color-text-light: hsl(240, 6%, 50%);
+
+$color-background-light: hsl(273, 75%, 66%);
+$color-background-dark: hsl(240, 73%, 65%);
+$color-dividers: hsl(240, 5%, 91%);
+
+$screen-sm: 768px;
+
+@mixin tab {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+//~~~~~~~~~~~~~~~~~~~~~ ANIMATIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@keyframes rotateCarrot {
+  0% {transform: rotate(180deg);}
+  100% {transform: rotate(0deg);}
+}
+
+
+//~~~~~~~~~~~~~~~~~~~~~ OVERALL STYLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(to bottom, $color-background-light, $color-background-dark);
+  min-height: 100vh;
+  // text-align: center;
+}
+
+//~~~~~~~~~~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $color-text-primary;
+}
+//media query textalign left
+
+.list__text {
+  &--main {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $color-text-dark;
+  }
+
+  &--collapsible {
+    font-size: 1.2rem;
+    color: $color-text-light;
+    line-height: 1.5;
+  }
+}
+
+//~~~~~~~~~~~~~~~~~~~~~ CARD ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.card-wrapper {
+  background-color: #fff;
+  // display: block;
+  width: 80%;
+  // height: 50%;
+  border-radius: 25px;
+  margin: 10rem auto;
+  box-shadow: 0 40px 50px -20px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 2rem 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.image-section {
+  background: url(../images/bg-pattern-mobile.svg) no-repeat center bottom;
+  height: 10rem;
+  margin-bottom: 3rem;
+  // text-align: center;
+}
+
+// .image-wrapper {
+//   text-align: left;
+//   width: 50%;
+//   margin: 0 auto;
+// }
+.mobile-image {
+  transform: translateY(-55%);
+  display: block;
+  margin: 0 auto;
+  padding-right: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+//~~~~~~~~~~~~~~~~~~~~~ COLLAPSIBLE SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.heading-row {
+  border: none;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.list {
+  list-style-type: none;
+  // display: flex;
+  // flex-direction: column;
+
+  &__item {
+    border-bottom: 1px solid $color-dividers;
+    // padding: 2rem 0;
+  }
+
+  &__dropdown {
+    position: absolute;
+    right: 0;
+    // margin-right: 2rem;
+    margin-left: 1.5rem;
+    transform: rotate(180deg);
+    transition: 1s;
+    animation: rotateCarrot;
+    
+  }
+
+  &__text {
+    &--main {
+      display: inline-block;
+      // padding: 5rem;
+    }
+    &--collapsible {
+      padding-bottom: 1.5rem;
+    }
+    &--hidden {
+      display: none;
+    }
+    &--visible {
+      display: inline-block;
+    }
+  }
+}
+
+//~~~~~~~~~~~~~~~~~~~~~ DECLARE VARIABLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
