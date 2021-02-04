@@ -40,7 +40,7 @@ body {
   font-size: 1.2rem;
   font-family: "Kumbh Sans", sans-serif;
   background: linear-gradient(to bottom, $color-background-light, $color-background-dark);
-  min-height: 100vh;
+  min-height: 110vh;
 }
 
 //~~~~~~~~~~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -101,7 +101,6 @@ h1 {
     margin: 0;
     text-align: center;
   }
-  
 }
 
 .image-wrapper {
@@ -110,22 +109,20 @@ h1 {
   height: 200px;
   width: 260px;
   position: relative;
-  top:-115%;
+  top: -115%;
   margin: 0 auto;
-
 
   @include tab {
     background: url(../images/illustration-woman-online-desktop.svg) no-repeat 100% 75%;
     background-size: 115%;
     height: 90%;
     width: 100%;
-    position: static;
+    position: relative;
     top: 0;
     margin: 0 auto;
-
   }
   @include xl-screen {
-    background-size: 90%; 
+    background-size: 90%;
   }
 }
 
@@ -205,11 +202,21 @@ h1 {
   }
 }
 
-//~~~~~~~~~~~~~~~~~~~~~ ACTIVE STYLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.active-text-bold {
-  font-weight: 700;
+.active-row {
+  & .list {
+    &__text--main {
+      font-weight: 700;
+    }
+    &__dropdown {
+      transform: rotate(180deg);
+    }
+  }
 }
+// //~~~~~~~~~~~~~~~~~~~~~ ACTIVE STYLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// .active-text-bold {
+//   font-weight: 700;
+// }
 
-.active-dropdown {
-  transform: rotate(180deg);
-}
+// .active-dropdown {
+//   transform: rotate(180deg);
+// }
