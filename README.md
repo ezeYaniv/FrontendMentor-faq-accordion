@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My Solution on Frontend Mentor]()
-- Live Site URL: [Social Proof hosted on Vercel](https://fem-faq-accordion-theta.vercel.app/)
+- Solution URL: [My Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/faq-accordion-using-scss-and-jquery-Ewe3R9fFt)
+- Live Site URL: [FAQ Accordion hosted on Vercel](https://fem-faq-accordion-theta.vercel.app/)
 
 ## My process
 
